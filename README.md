@@ -85,7 +85,7 @@ conda activate cifar10-classifier
 ## 🎯 Project Structure
 
 ```
-intro-to-ml-pytorch/
+python-cifar-10-image-classifier/
 ├── 📓 CIFAR-10_Image_Classifier-STARTER_Solution.ipynb  # Main project notebook
 ├── 🔧 setup_environment.sh                      # Complete conda environment setup
 ├── 📝 activate_env.sh                          # Environment activation script (auto-generated)
@@ -95,6 +95,8 @@ intro-to-ml-pytorch/
 ├── 📁 CIFAR_10_data/                           # Dataset directory (auto-created)
 │   ├── cifar-10-python.tar.gz                  # Original dataset
 │   └── cifar-10-batches-py/                    # Extracted data
+├── 📋 .gitignore                               # Git ignore rules
+├── 📋 LICENSE                                  # MIT license
 └── 📋 README.md                                # This documentation
 ```
 
