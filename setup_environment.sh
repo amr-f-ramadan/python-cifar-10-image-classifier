@@ -114,52 +114,6 @@ conda install -y \
 echo "🔗 Setting up Jupyter kernel..."
 python -m ipykernel install --user --name=$ENV_NAME --display-name="CIFAR-10 Classifier"
 
-# Test the environment
-echo ""
-test_environment
-
-# Create activation script for easy future use
-echo ""
-echo "📝 Creating activation script..."
-cat > activate_env.sh << 'EOF'
-#!/bin/bash
-# CIFAR-10 Classifier Environment Activation Script
-
-ENV_NAME="cifar10-classifier"
-
-# Function to activate conda environment
-activate_conda_env() {
-    if command -v conda &> /dev/null; then
-        source $(conda info --base)/etc/profile.d/conda.sh
-        if conda env list | grep -q "^${ENV_NAME} "; then
-            conda activate $ENV_NAME
-            echo "✅ Environment '${ENV_NAME}' activated!"
-            echo ""
-            echo "🎯 Available commands:"
-            echo "   jupyter notebook CIFAR-10_Image_Classifier-STARTER.ipynb"
-            echo "   python test_environment.py"
-            echo ""
-            echo "🔧 To deactivate: conda deactivate"
-        else
-            echo "❌ Environment '${ENV_NAME}' not found!"
-            echo "💡 Run './setup_environment.sh' to create it."
-            return 1
-        fi
-    else
-        echo "❌ Conda not found!"
-        return 1
-    fi
-}
-
-activate_conda_env
-EOF
-
-chmod +x activate_env.sh
-
-# Create environment export for reproducibility
-echo "� Exporting environment specification..."
-conda env export > environment.yml
-
 # Success message
 echo ""
 echo "🎉 Setup Complete!"
