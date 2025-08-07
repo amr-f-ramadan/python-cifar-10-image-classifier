@@ -88,9 +88,7 @@ conda activate cifar10-classifier
 python-cifar-10-image-classifier/
 ├── 📓 CIFAR-10_Image_Classifier-STARTER_Solution.ipynb  # Main project notebook
 ├── 🔧 setup_environment.sh                      # Complete conda environment setup
-├── 📝 activate_env.sh                          # Environment activation script (auto-generated)
-├── 📋 environment.yml                          # Conda environment specification (auto-generated)
-├── 💾 cifar10_simple_model.pth                 # Trained simple CNN model
+├──  cifar10_simple_model.pth                 # Trained simple CNN model
 ├── 💾 cifar10_complex_model.pth                # Trained residual CNN model
 ├── 📁 CIFAR_10_data/                           # Dataset directory (auto-created)
 │   ├── cifar-10-python.tar.gz                  # Original dataset
